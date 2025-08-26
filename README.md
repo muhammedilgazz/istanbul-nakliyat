@@ -155,7 +155,7 @@ document.querySelector('#pricingForm')?.addEventListener('submit', calculatePric
   <button type="submit">Fiyatı Hesapla</button>
 </form>
 <p id="result" aria-live="polite"></p>
-```
+ 
 
 ---
 
@@ -225,6 +225,6 @@ GA4 snippet’i HTML’e gömülür; eventler `gtag('event', ...)` ile gönderil
 * Parça-tekrarını azaltmak için `partials/` + `fetch()` yöntemi önerildi.
 * İleride ihtiyaç olursa, form backend’i eklemesi minimum dokunuşla yapılır.
 
-```
+ 
 
   
