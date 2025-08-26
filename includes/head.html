@@ -1,0 +1,60 @@
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="İstanbul Nakliyat">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="TR-34">
+    <meta name="geo.placename" content="İstanbul">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#1e293b',
+                            700: '#1e293b',
+                            800: '#1e293b',
+                            900: '#1e293b'
+                        },
+                        secondary: {
+                            300: '#fed7aa',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c'
+                        }
+                    },
+                    fontFamily: {
+                        'display': ['Inter', 'sans-serif'],
+                        'sans': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        .animate-bounce-gentle {
+            animation: bounceGentle 2s infinite;
+        }
+        
+        @keyframes bounceGentle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        }
+    </style>

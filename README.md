@@ -16,7 +16,7 @@
 
 ## 📦 Klasör Yapısı
 
- 
+  
 ```markdown
 / (repo kökü)
 ├─ index.html                # Ana sayfa (Hero, hizmetler, mini SSS, CTA)
