@@ -92,8 +92,8 @@ Yeni bir bölge sayfası eklemek için:
 ---
 
 ## 📞 İletişim Hatları
-- 0536-799 2626
-- 0536-628 3232
+- 05541213128
+- 05541213128
 
 Tüm sayfalarda `tel:` ve `https://wa.me/` deep linkleri.
 
