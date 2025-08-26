@@ -1221,6 +1221,18 @@ ody class="font-sans antialiased">
                 </div>
             </div>
         </section>
+
+        <!-- Features Section Include -->
+        <div id="features-placeholder"></div>
+
+        <!-- Services Grid Include -->
+        <div id="services-placeholder"></div>
+
+        <!-- CTA Section Include -->
+        <div id="cta-placeholder"></div>
+
+        <!-- Contact Form Include -->
+        <div id="contact-form-placeholder"></div>
     </main>
 
     <!-- Footer -->
@@ -1589,6 +1601,24 @@ ody class="font-sans antialiased">
             }
             
             handleScroll(); // Recheck CTA visibility
+        });
+
+        // Load includes
+        function loadInclude(elementId, filePath) {
+            fetch(filePath)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                })
+                .catch(error => console.error('Error loading include:', error));
+        }
+
+        // Load all includes
+        document.addEventListener('DOMContentLoaded', function() {
+            loadInclude('features-placeholder', 'includes/features-section.html');
+            loadInclude('services-placeholder', 'includes/services-grid.html');
+            loadInclude('cta-placeholder', 'includes/cta-section.html');
+            loadInclude('contact-form-placeholder', 'includes/contact-form.html');
         });
     </script>
 </body>

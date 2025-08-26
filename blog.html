@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Blog - İstanbul Nakliyat</title>
+    <meta name="description" content="Nakliye ve taşımacılık hakkında faydalı bilgiler, ipuçları ve güncel haberler. İstanbul Nakliyat blog sayfası.">
+    <meta name="keywords" content="nakliye blog, taşımacılık ipuçları, nakliye haberleri">
+    <link rel="canonical" href="https://istanbul-nakliyat.netlify.app/blog.html">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="İstanbul Nakliyat">
+    <meta name="robots" content="index, follow">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            600: '#1e293b',
+                            700: '#1e293b'
+                        },
+                        secondary: {
+                            500: '#f97316',
+                            600: '#ea580c'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans antialiased">
+    <!-- Header Include -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Blog</h1>
+                    <p class="text-xl mb-8 text-primary-100">
+                        Nakliye ve taşımacılık hakkında faydalı bilgiler ve güncel haberler
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Posts Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Blog Post 1 -->
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="p-6">
+                            <h2 class="text-xl font-semibold mb-3">Nakliye Öncesi Hazırlık Listesi</h2>
+                            <p class="text-gray-600 mb-4">Taşınma sürecini kolaylaştırmak için yapmanız gerekenler...</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <span>15 Ocak 2024</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 2 -->
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="p-6">
+                            <h2 class="text-xl font-semibold mb-3">Ofis Taşımacılığında Dikkat Edilecekler</h2>
+                            <p class="text-gray-600 mb-4">İş yerini taşırken önemli noktalar ve ipuçları...</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <span>10 Ocak 2024</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 3 -->
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="p-6">
+                            <h2 class="text-xl font-semibold mb-3">Kış Aylarında Nakliye</h2>
+                            <p class="text-gray-600 mb-4">Soğuk hava koşullarında güvenli taşımacılık...</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <span>5 Ocak 2024</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Coming Soon Message -->
+                <div class="text-center mt-12">
+                    <p class="text-gray-600">Daha fazla içerik yakında eklenecek...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <div id="contact-form-placeholder"></div>
+    </main>
+
+    <!-- Footer Include -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Scripts -->
+    <script src="includes/scripts.js"></script>
+    <script>
+        // Load includes
+        loadInclude('header-placeholder', 'includes/header.html');
+        loadInclude('footer-placeholder', 'includes/footer.html');
+        loadInclude('contact-form-placeholder', 'includes/contact-form.html');
+    </script>
+</body>
+</html>

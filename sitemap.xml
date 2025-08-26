@@ -80,11 +80,109 @@
         <priority>0.8</priority>
     </url>
     
+    <url>
+        <loc>https://istanbul-nakliyat.netlify.app/beylikduzu-nakliye.html</loc>
+        <lastmod>2024-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://istanbul-nakliyat.netlify.app/esenyurt-nakliye.html</loc>
+        <lastmod>2024-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://istanbul-nakliyat.netlify.app/avcilar-nakliye.html</loc>
+        <lastmod>2024-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://istanbul-nakliyat.netlify.app/bagcilar-nakliye.html</loc>
+        <lastmod>2024-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://istanbul-nakliyat.netlify.app/kucukcekmece-nakliye.html</loc>
+        <lastmod>2024-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://istanbul-nakliyat.netlify.app/buyukcekmece-nakliye.html</loc>
+        <lastmod>2024-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://istanbul-nakliyat.netlify.app/silivri-nakliye.html</loc>
+        <lastmod>2024-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
     <!-- Kurumsal Sayfalar -->
     <url>
         <loc>https://istanbul-nakliyat.netlify.app/hakkimizda.html</loc>
         <lastmod>2024-08-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://istanbul-nakliyat.netlify.app/referanslar.html</loc>
+        <lastmod>2024-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://istanbul-nakliyat.netlify.app/iletisim.html</loc>
+        <lastmod>2024-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://istanbul-nakliyat.netlify.app/blog.html</loc>
+        <lastmod>2024-08-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://istanbul-nakliyat.netlify.app/kvkk.html</loc>
+        <lastmod>2024-08-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://istanbul-nakliyat.netlify.app/gizlilik-politikasi.html</loc>
+        <lastmod>2024-08-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://istanbul-nakliyat.netlify.app/kullanim-kosullari.html</loc>
+        <lastmod>2024-08-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://istanbul-nakliyat.netlify.app/cerez-politikasi.html</loc>
+        <lastmod>2024-08-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
     </url>
 </urlset>
