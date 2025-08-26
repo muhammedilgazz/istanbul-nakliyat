@@ -1,5 +1,5 @@
  
-```markdown
+
 # 🚚 City Moving Pro – Statik (Pure HTML/CSS/JS) Lojistik Sitesi
 
 İstanbul merkezli şehir içi/şehirdışı nakliye, OSB/tekstil/soğuk zincir uzmanlığı için **tamamen statik** bir kurumsal web sitesi.  
@@ -17,7 +17,7 @@
 ## 📦 Klasör Yapısı
 
  
-
+```markdown
 / (repo kökü)
 ├─ index.html                # Ana sayfa (Hero, hizmetler, mini SSS, CTA)
 ├─ services/
@@ -52,12 +52,13 @@
 
  
 
-> **Not:** Saf HTML’de include yok. `main.js` içinde `fetch('/partials/header.html')` ile header/footer çekilip DOM’a gömülebilir (tüm sayfalarda ortak yapı korunur).
+> **Not:** Saf HTML’de include yok. `main.js` içinde `fetch('/partials/header.html')`
+ile header/footer çekilip DOM’a gömülebilir (tüm sayfalarda ortak yapı korunur).
 
----
-
+ 
+``` 
 ## 🧩 Sayfa Bileşenleri
-
+  
 - **Header + Sticky CTA Bar:** “Ara”, “WhatsApp”, “Fiyat Hesapla”
 - **Hero:** Net değer önerisi, tek cümlelik alt açıklama, iki ana CTA
 - **Hizmet Kartları:** İkon + kısa açıklama + “Detay” linki
@@ -132,8 +133,8 @@ document.querySelector('#pricingForm')?.addEventListener('submit', calculatePric
 ```
 
 **HTML parçası (`pricing/index.html`):**
+``` 
 
-```html
 <form id="pricingForm">
   <label>Yük Tipi
     <select id="type">
@@ -157,8 +158,8 @@ document.querySelector('#pricingForm')?.addEventListener('submit', calculatePric
 <p id="result" aria-live="polite"></p>
  
 
----
 
+```
 ## 🧠 SEO & Erişilebilirlik
 
 * **Meta başlık/açıklama:** Her sayfada benzersiz `<title>` ve `<meta name="description">`
