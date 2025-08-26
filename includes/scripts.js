@@ -40,6 +40,18 @@ function updatePageContent(pageType, locationName) {
     }
 }
 
+// Include loader function
+function loadInclude(elementId, filePath) {
+    fetch(filePath)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error loading include:', error);
+        });
+}
+
 // Initialize page when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Get page type from URL or page title
@@ -56,5 +68,19 @@ document.addEventListener('DOMContentLoaded', function() {
         updatePageContent('location', 'İkitelli');
     } else if (currentPage.includes('hadimkoy')) {
         updatePageContent('location', 'Hadımköy');
+    } else if (currentPage.includes('esenyurt')) {
+        updatePageContent('location', 'Esenyurt');
+    } else if (currentPage.includes('avcilar')) {
+        updatePageContent('location', 'Avcılar');
+    } else if (currentPage.includes('bagcilar')) {
+        updatePageContent('location', 'Bağcılar');
+    } else if (currentPage.includes('kucukcekmece')) {
+        updatePageContent('location', 'Küçükçekmece');
+    } else if (currentPage.includes('buyukcekmece')) {
+        updatePageContent('location', 'Büyükçekmece');
+    } else if (currentPage.includes('silivri')) {
+        updatePageContent('location', 'Silivri');
+    } else if (currentPage.includes('beylikduzu')) {
+        updatePageContent('location', 'Beylikdüzü');
     }
 });

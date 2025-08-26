@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Büyükçekmece Nakliye - Büyükçekmece Nakliyat Firması | İstanbul Nakliyat</title>
+    <meta name="description" content="Büyükçekmece nakliye hizmetleri. Büyükçekmece'de evden eve nakliyat, ofis taşımacılığı, komple araç sistemi. Profesyonel Büyükçekmece nakliye firması.">
+    <meta name="keywords" content="büyükçekmece nakliye, büyükçekmece nakliyat, büyükçekmece evden eve nakliyat">
+    <link rel="canonical" href="https://istanbul-nakliyat.netlify.app/buyukcekmece-nakliye.html">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="İstanbul Nakliyat">
+    <meta name="robots" content="index, follow">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            600: '#1e293b',
+                            700: '#1e293b'
+                        },
+                        secondary: {
+                            500: '#f97316',
+                            600: '#ea580c'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans antialiased">
+    <!-- Header Include -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                        Büyükçekmece Nakliye Hizmetleri
+                    </h1>
+                    <p class="text-xl mb-8 text-primary-100">
+                        Büyükçekmece'de profesyonel nakliye hizmetleri. Göl manzaralı konutlar ve villa bölgeleri için özel çözümler.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="tel:05367992626" class="px-8 py-4 bg-secondary-500 text-white rounded-lg hover:bg-secondary-600 transition-colors font-semibold">
+                            Hemen Ara: 0536-799 2626
+                        </a>
+                        <a href="https://wa.me/905367992626?text=Büyükçekmece nakliye hizmeti hakkında bilgi almak istiyorum." target="_blank" class="px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-primary-50 transition-colors font-semibold">
+                            WhatsApp İletişim
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <div id="contact-form-placeholder"></div>
+    </main>
+
+    <!-- Footer Include -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Scripts -->
+    <script src="includes/scripts.js"></script>
+    <script>
+        // Load includes
+        loadInclude('header-placeholder', 'includes/header.html');
+        loadInclude('footer-placeholder', 'includes/footer.html');
+        loadInclude('contact-form-placeholder', 'includes/contact-form.html');
+        
+        // Set page-specific content
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update footer description for this location
+            const footerDesc = document.getElementById('footer-description');
+            if (footerDesc) {
+                footerDesc.textContent = 'Büyükçekmece merkezli güvenilir nakliye hizmetleri';
+            }
+        });
+    </script>
+</body>
+</html>
