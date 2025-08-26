@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://citymovingpro.com/sitemap.xml
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.pdf$
+
+# Allow important pages
+Allow: /sehir-ici-nakliye.html
+Allow: /sehirler-arasi-lojistik.html
+Allow: /ofis-tasimaciligi.html
+Allow: /tekstil-nakliye.html
+Allow: /soguk-hava-tasimaciligi.html
+Allow: /hadimkoy-nakliye.html
+Allow: /tuzla-nakliye.html
+Allow: /ikitelli-nakliye.html
+Allow: /basaksehir-nakliye.html
+Allow: /gebze-nakliye.html
+Allow: /hakkimizda.html
+
+# Crawl-delay
+Crawl-delay: 1
