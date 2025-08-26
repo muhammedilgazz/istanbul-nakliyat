@@ -16,7 +16,7 @@
 
 ## 📦 Klasör Yapısı
 
-```
+ 
 
 / (repo kökü)
 ├─ index.html                # Ana sayfa (Hero, hizmetler, mini SSS, CTA)
@@ -50,7 +50,7 @@
 │  └─ faq.html
 └─ README.md
 
-````
+ 
 
 > **Not:** Saf HTML’de include yok. `main.js` içinde `fetch('/partials/header.html')` ile header/footer çekilip DOM’a gömülebilir (tüm sayfalarda ortak yapı korunur).
 
@@ -97,7 +97,7 @@ Tüm sayfalarda `tel:` ve `https://wa.me/` deep linkleri.
   "packing": 150,
   "extra_staff": 250
 }
-````
+ 
 
 **Basit JS iskeleti (`assets/js/pricing.js`):**
 
