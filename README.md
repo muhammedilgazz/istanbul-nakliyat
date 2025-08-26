@@ -1,165 +1,104 @@
- 
-
-# 🚚 City Moving Pro – Statik (Pure HTML/CSS/JS) Lojistik Sitesi
+# 🚚 İstanbul Nakliyat – Profesyonel Nakliye Web Sitesi
 
 İstanbul merkezli şehir içi/şehirdışı nakliye, OSB/tekstil/soğuk zincir uzmanlığı için **tamamen statik** bir kurumsal web sitesi.  
-**Stack:** HTML5 + CSS3 (Tailwind yok) + Vanilla JS (derleme yok, bağımlılık yok).
+**Stack:** HTML5 + Tailwind CSS + Vanilla JS
+
+## ✅ Yapılan Optimizasyonlar (Son Güncelleme)
+
+### 1. Footer ve Link Düzeltmeleri
+- ✅ Tüm sayfalardaki footer linkleri düzeltildi ve SEO için açılmış sayfalar ile doğru şekilde linklendi
+- ✅ Ana sayfadaki dropdown menülerdeki linkler gerçek sayfa linklerine güncellendi
+- ✅ Eksik olan `hadimkoy-nakliye.html` sayfası oluşturuldu
+- ✅ Tüm bölge sayfaları arasında tutarlı linkler sağlandı
+
+### 2. Tekrar Eden Kodların Optimizasyonu
+- ✅ `includes/` klasörü oluşturuldu
+- ✅ Ortak bileşenler ayrı dosyalara çıkarıldı:
+  - `includes/header.html` - Ortak header ve navigasyon
+  - `includes/footer.html` - Ortak footer
+  - `includes/head.html` - Ortak CSS ve meta taglar
+  - `includes/scripts.js` - Ortak JavaScript fonksiyonları
+  - `includes/page-template.html` - Yeni sayfa oluşturmak için template
+
+### 3. SEO Optimizasyonları
+- ✅ Tüm bölge sayfalarında doğru canonical URL'ler
+- ✅ Structured data (JSON-LD) ile local business bilgileri
+- ✅ Bölgeye özel meta description ve keywords
+- ✅ Open Graph meta tagları
 
 ---
 
-## 🎯 Amaç & KPI’lar
+## 📦 Mevcut Dosya Yapısı
+
+```
+├── index.html                    # Ana sayfa
+├── basaksehir-nakliye.html      # Başakşehir nakliye sayfası
+├── gebze-nakliye.html           # Gebze nakliye sayfası
+├── hadimkoy-nakliye.html        # Hadımköy nakliye sayfası
+├── ikitelli-nakliye.html        # İkitelli nakliye sayfası
+├── tuzla-nakliye.html           # Tuzla nakliye sayfası
+├── sehir-ici-nakliye.html       # Şehir içi nakliye sayfası
+├── sehirler-arasi-lojistik.html # Şehirler arası lojistik sayfası
+├── ofis-tasimaciligi.html       # Ofis taşımacılığı sayfası
+├── soguk-hava-tasimaciligi.html # Soğuk hava taşımacılığı sayfası
+├── tekstil-nakliye.html         # Tekstil nakliye sayfası
+├── hakkimizda.html              # Hakkımızda sayfası
+├── includes/                    # Ortak bileşenler
+│   ├── header.html             # Ortak header
+│   ├── footer.html             # Ortak footer
+│   ├── head.html               # Ortak CSS ve meta taglar
+│   ├── scripts.js              # Ortak JavaScript
+│   └── page-template.html      # Yeni sayfa template'i
+├── images/                      # Görseller
+│   ├── hero-truck.jpg
+│   └── truck.png
+├── robots.txt                   # SEO robots dosyası
+├── sitemap.xml                  # SEO sitemap
+└── README.md                    # Bu dosya
+```
+
+## 🆕 Yeni Sayfa Ekleme
+
+Yeni bir bölge sayfası eklemek için:
+
+1. `includes/page-template.html` dosyasını kopyalayın
+2. Dosya adını `[bolge-adi]-nakliye.html` olarak değiştirin
+3. Template içindeki placeholder'ları değiştirin:
+   - `[LOCATION]` → Bölge adı (örn: "Beylikdüzü")
+   - `[location-lower]` → Küçük harfli bölge adı (örn: "beylikduzu")
+   - `[CUSTOM_DESCRIPTION]` → Bölgeye özel açıklama
+4. Bölgeye özel hizmetler ve avantajlar ekleyin
+5. Footer ve header linklerine yeni sayfayı ekleyin
+
+---
+
+## 🎯 Amaç & KPI'lar
 - **Lead üretimi:** Telefon tıklaması, WhatsApp tıklaması, form gönderimi
 - **Dönüşüm akışı:** Hero → Hizmet/Region → Fiyat Hesap → İletişim
 - **SEO:** Bölge & hizmet sayfalarından organik trafik
 
 ---
 
-## 📦 Klasör Yapısı
-
-  
-```markdown
-/ (repo kökü)
-├─ index.html                # Ana sayfa (Hero, hizmetler, mini SSS, CTA)
-├─ services/
-│  ├─ index.html             # Hizmetler landing
-│  └─ evden-eve.html         # Örnek hizmet sayfası (şablon)
-├─ regions/
-│  ├─ index.html             # Bölgeler landing
-│  └─ hadimkoy.html          # Örnek bölge sayfası (şablon)
-├─ pricing/
-│  ├─ index.html             # Fiyat Hesaplama (form + sonuç alanı)
-│  └─ rules.json             # Basit katsayı konfigürasyonu
-├─ contact/
-│  └─ index.html             # İletişim (form, harita, çoklu hat)
-├─ assets/
-│  ├─ css/
-│  │  ├─ base.css            # Reset/typography/utility
-│  │  └─ theme.css           # Renk paleti, bileşen stilleri
-│  ├─ js/
-│  │  ├─ main.js             # Nav, sticky-cta, event tracking
-│  │  ├─ pricing.js          # Fiyat hesap mantığı
-│  │  └─ analytics.js        # GA4 (opsiyonel)
-│  ├─ img/
-│  │  ├─ hero.jpg
-│  │  └─ fleet/\*.jpg
-│  └─ icons/
-│     └─ \*.svg
-├─ partials/                 # (Opsiyonel) JS ile include edilecek HTML parçaları
-│  ├─ header.html
-│  ├─ footer.html
-│  └─ faq.html
-└─ README.md
-
- 
-
-> **Not:** Saf HTML’de include yok. `main.js` içinde `fetch('/partials/header.html')`
-ile header/footer çekilip DOM’a gömülebilir (tüm sayfalarda ortak yapı korunur).
-
- 
-``` 
 ## 🧩 Sayfa Bileşenleri
   
-- **Header + Sticky CTA Bar:** “Ara”, “WhatsApp”, “Fiyat Hesapla”
+- **Header + Sticky CTA Bar:** "Ara", "WhatsApp", "Fiyat Hesapla"
 - **Hero:** Net değer önerisi, tek cümlelik alt açıklama, iki ana CTA
-- **Hizmet Kartları:** İkon + kısa açıklama + “Detay” linki
+- **Hizmet Kartları:** İkon + kısa açıklama + "Detay" linki
 - **Bölge Grid:** 10–15 öncelikli ilçe/OSB landing linki
 - **Mini SSS:** 4–6 kısa soru; detay sayfaya yönlendirme
-- **Referans/Filomuz:** Görsel şerit veya hafif slider (JS’siz olursa da olur)
+- **Referans/Filomuz:** Görsel şerit veya hafif slider (JS'siz olursa da olur)
 - **Footer:** Telefonlar, çalışma saatleri, adres, politika linkleri
 
 ---
 
-## 📞 İletişim Hatları (örnek)
+## 📞 İletişim Hatları
 - 0536-799 2626
 - 0536-628 3232
-- +90 554 121 31 28
 
 Tüm sayfalarda `tel:` ve `https://wa.me/` deep linkleri.
 
 ---
 
-## 🧮 Fiyat Hesaplama (Vanilla JS – MVP)
-
-**Girdi Alanları:**
-- Çıkış/Varış (metin; Google Maps entegrasyonu yoksa düz input)
-- Yük tipi: ev/ofis/tekstil/soğuk
-- Hacim: m³ veya palet
-- Kat bilgisi/asansör, paketleme, ek personel
-- Tarih/saat
-
-**Kurallar:** `pricing/rules.json` içindeki katsayılar ile basit hesap.
-```json
-{
-  "base": 450,
-  "per_km": 12,
-  "type": { "ev": 1.0, "ofis": 1.1, "tekstil": 1.15, "soguk": 1.35 },
-  "volume_factor": 20,
-  "floor": { "asansor": 0, "yok": 2.0 },
-  "packing": 150,
-  "extra_staff": 250
-}
- 
-
-**Basit JS iskeleti (`assets/js/pricing.js`):**
-
-```js
-async function calculatePrice(e) {
-  e.preventDefault();
-  const rules = await fetch('/pricing/rules.json').then(r => r.json());
-
-  const type = document.querySelector('#type').value;     // ev/ofis/tekstil/soguk
-  const volume = +document.querySelector('#volume').value || 0; // m³
-  const floor  = document.querySelector('input[name="floor"]:checked').value; // asansor/yok
-  const pack   = document.querySelector('#packing').checked; // bool
-  const staff  = +document.querySelector('#extra_staff').value || 0; // kişi
-
-  // Mesafe hesap yoksa varsayımsal km input’u
-  const km     = +document.querySelector('#km').value || 10;
-
-  let price = rules.base 
-    + (rules.per_km * km)
-    + (rules.volume_factor * volume)
-    + (rules.type[type] - 1) * 100 // tip düzeltmesi
-    + (rules.floor[floor] * 50)    // kat etkisi
-    + (pack ? rules.packing : 0)
-    + (staff * rules.extra_staff);
-
-  const low = Math.round(price * 0.9);
-  const high = Math.round(price * 1.15);
-  document.querySelector('#result').textContent = `Tahmini: ₺${low} – ₺${high}`;
-}
-
-document.querySelector('#pricingForm')?.addEventListener('submit', calculatePrice);
-```
-
-**HTML parçası (`pricing/index.html`):**
-``` 
-
-<form id="pricingForm">
-  <label>Yük Tipi
-    <select id="type">
-      <option value="ev">Ev</option>
-      <option value="ofis">Ofis</option>
-      <option value="tekstil">Tekstil</option>
-      <option value="soguk">Soğuk</option>
-    </select>
-  </label>
-  <label>Hacim (m³) <input id="volume" type="number" min="0" step="0.1"></label>
-  <label>Mesafe (km) <input id="km" type="number" min="1"></label>
-  <fieldset>
-    <legend>Kat/Asansör</legend>
-    <label><input type="radio" name="floor" value="asansor" checked> Asansör Var</label>
-    <label><input type="radio" name="floor" value="yok"> Asansör Yok</label>
-  </fieldset>
-  <label><input id="packing" type="checkbox"> Paketleme İstiyorum</label>
-  <label>Ek Personel <input id="extra_staff" type="number" min="0" max="6"></label>
-  <button type="submit">Fiyatı Hesapla</button>
-</form>
-<p id="result" aria-live="polite"></p>
- 
-
-
-```
 ## 🧠 SEO & Erişilebilirlik
 
 * **Meta başlık/açıklama:** Her sayfada benzersiz `<title>` ve `<meta name="description">`
@@ -170,23 +109,14 @@ document.querySelector('#pricingForm')?.addEventListener('submit', calculatePric
 
 ---
 
-## ⚙️ Analytics (opsiyonel)
+## 🛠️ Teknik Özellikler
 
-`assets/js/analytics.js` içinde event yakalama:
-
-* Tel tıklaması
-* WhatsApp tıklaması
-* Fiyat hesap form submit
-* İletişim form submit
-
-GA4 snippet’i HTML’e gömülür; eventler `gtag('event', ...)` ile gönderilir.
-
----
-
-## 🛡️ Hukuki Metinler
-
-* `kvkk.html`, `cerez-politikasi.html`, `mesafeli-hizmet.html` (varsa)
-* Footer’dan erişilebilir, dil sade, güncel tarihli.
+- **Framework**: Tailwind CSS
+- **Responsive**: Mobil uyumlu tasarım
+- **SEO**: Optimize edilmiş meta taglar ve structured data
+- **Performance**: Optimize edilmiş görseller ve CSS
+- **Accessibility**: WCAG uyumlu tasarım
+- **Browser Support**: Modern tarayıcılar
 
 ---
 
@@ -194,7 +124,6 @@ GA4 snippet’i HTML’e gömülür; eventler `gtag('event', ...)` ile gönderil
 
 * **Lokal:** `index.html` dosyasını tarayıcıda aç (ya da basit sunucu)
 * **Basit statik sunucu (opsiyonel):**
-
   * Python: `python -m http.server 8080`
   * Node (http-server): `npx http-server . -p 8080`
 * **Deploy:** GitHub Pages / Netlify / Vercel (Statik)
@@ -220,12 +149,11 @@ GA4 snippet’i HTML’e gömülür; eventler `gtag('event', ...)` ile gönderil
 
 ---
 
-## 📌 Notlar
+## 📌 Geliştirme Notları
 
-* Framework yok, bağımlılık yok; her şey saf HTML/CSS/JS.
-* Parça-tekrarını azaltmak için `partials/` + `fetch()` yöntemi önerildi.
-* İleride ihtiyaç olursa, form backend’i eklemesi minimum dokunuşla yapılır.
-
- 
-
-  
+- HTML dosyalarında include sistemi kullanılmıyor (statik HTML)
+- Ortak bileşenler manuel olarak kopyalanmalı
+- JavaScript fonksiyonları `includes/scripts.js` dosyasında
+- CSS stilleri Tailwind CSS ile inline olarak yazılmış
+- Framework yok, bağımlılık yok; her şey saf HTML/CSS/JS.
+- İleride ihtiyaç olursa, form backend'i eklemesi minimum dokunuşla yapılır.
