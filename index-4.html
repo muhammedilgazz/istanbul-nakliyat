@@ -422,6 +422,141 @@
         </section>
 
         <section id="calculator" class="py-16 bg-white" aria-labelledby="teklif-baslik">
+            <!-- =========================================================
+     F I Y A T   T E K L I F I   B Ö L Ü M Ü
+========================================================= -->
+<link rel="stylesheet" href="quote-section.css" />
+
+<section class="quote">
+  <div class="quote__inner">
+
+    <!-- Başlık -->
+    <header class="quote__header">
+      <h2>Fiyat Teklifi Alın</h2>
+      <p>Nakliyat ihtiyacınızı belirtin, size en uygun fiyatı sunalım.</p>
+    </header>
+
+    <!-- Kartlar -->
+    <div class="quote__cards">
+
+      <!-- ============== Bizi Arayın ============== -->
+      <aside class="card card--call" aria-labelledby="call-title">
+        <div class="card__top">
+          <span class="icon-wrap">
+            <!-- Tel ikon -->
+            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1
+                     1 0 01.95.68l1.5 4.49a1 1 0 01-.5
+                     1.21l-2.26 1.13a11.04 11.04 0 005.52
+                     5.52l1.13-2.26a1 1 0 011.21-.5l4.49
+                     1.5a1 1 0 01.68.95V19a2 2 0 01-2
+                     2h-1C9.72 21 3 14.28 3 6V5z"/>
+            </svg>
+          </span>
+
+          <h3 id="call-title">Hemen Arayın</h3>
+          <p class="muted">
+            Anında fiyat teklifi için bizi arayın. Uzman ekibimiz yardımcı olsun.
+          </p>
+
+          <!-- Butonlar -->
+          <div class="btn-group">
+            <a href="tel:05541213128" class="btn btn--invert"
+               aria-label="0554 121 31 28 numarasını ara">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1
+                       1 0 01.95.68l1.5 4.49a1 1 0 01-.5
+                       1.21l-2.26 1.13a11.04 11.04 0 005.52
+                       5.52l1.13-2.26a1 1 0 011.21-.5l4.49
+                       1.5a1 1 0 01.68.95V19a2 2 0 01-2
+                       2h-1C9.72 21 3 14.28 3 6V5z"/>
+              </svg>
+              0554&nbsp;121&nbsp;31&nbsp;28
+            </a>
+
+            <a href="https://wa.me/905541213128?text=Merhaba%2C%20nakliyat%20hizmeti%20için%20fiyat%20teklifi%20almak%20istiyorum."
+               target="_blank" class="btn btn--secondary"
+               aria-label="WhatsApp ile yazın">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+              </svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- dipnot -->
+        <p class="card__foot muted small">
+          📞 7/24 Hizmet • 🚚 Ücretsiz Keşif • 💯 Garantili Hizmet
+        </p>
+      </aside>
+
+      <!-- ============== Sizi Arayalım ============== -->
+      <section class="card card--form" aria-labelledby="form-title">
+        <div class="card__top">
+          <span class="icon-wrap icon-wrap--secondary">
+            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12
+                       14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+          </span>
+
+          <h3 id="form-title">Sizi Arayalım</h3>
+          <p class="muted">Bilgilerinizi bırakın, en kısa sürede dönüş yapalım.</p>
+
+          <form id="callback-form" onsubmit="submitCallbackForm(event)">
+            <label>Adınız Soyadınız *
+              <input type="text" id="callback-name" required placeholder="Adınız ve soyadınız">
+            </label>
+
+            <label>Telefon Numaranız *
+              <input type="tel" id="callback-phone" required placeholder="0554 121 31 28">
+            </label>
+
+            <label>Hizmet Türü
+              <select id="callback-service">
+                <option value="">Seçiniz</option>
+                <option>Evden Eve Nakliyat</option>
+                <option>Şehirler Arası Nakliyat</option>
+                <option>Ofis Taşımacılığı</option>
+                <option>Asansörlü Taşıma</option>
+                <option>Parça Eşya</option>
+                <option>Soğuk Hava</option>
+              </select>
+            </label>
+
+            <label>Ne zaman arayalım?
+              <select id="callback-time">
+                <option>Hemen</option>
+                <option>1 saat içinde</option>
+                <option>Bugün</option>
+                <option>Yarın</option>
+              </select>
+            </label>
+
+            <label>Ek Bilgiler
+              <textarea id="callback-notes" rows="3"
+                        placeholder="Taşınacak eşyalar, adres ve tarih vb."></textarea>
+            </label>
+
+            <button type="submit" class="btn btn--secondary w-100">
+              Gönder – Beni Arayın
+            </button>
+          </form>
+        </div>
+
+        <p class="card__foot muted small">
+          * Zorunlu alanlar. Bilgileriniz gizli tutulur.
+        </p>
+      </section>
+
+    </div>
+  </div>
+</section>
         </section>
 
         <!-- SEO Regions Section (kısmi içerik korunarak marka ve anahtar kelime uyumlu hale getirildi) -->
