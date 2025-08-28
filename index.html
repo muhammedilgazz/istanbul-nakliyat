@@ -203,7 +203,7 @@
             --tw-contain-size: ;
             --tw-contain-layout: ;
             --tw-contain-paint: ;
-            --tw-contain-style: ;
+            --tw-contain-style:
         }
 
         ::backdrop {
@@ -257,7 +257,7 @@
             --tw-contain-size: ;
             --tw-contain-layout: ;
             --tw-contain-paint: ;
-            --tw-contain-style: ;
+            --tw-contain-style:
         }
 
         /* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */
@@ -2136,7 +2136,7 @@
         }
 
         .container {
-            <!-- display: flex; -->
+            /** display: flex; **/
             align-items: center;
             justify-content: space-between;
             gap: 40px;
@@ -2326,7 +2326,7 @@
             cursor: pointer;
             font-size: 15px;
             font-weight: 600;
-            box-shadow: 0 1px 3px rgba(0,0,0,.08);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
             transition: background .15s ease, transform .05s ease;
         }
 
@@ -2370,8 +2370,7 @@
                 text-align: center;
                 margin-top: 6px
             }
-        }
-
+            
         /* Sağ kart: formu tek satıra topla */
         .callback-form {
             display: grid;
@@ -2398,6 +2397,7 @@
             white-space: nowrap;
             border: 0
         }
+    }
 
         @media (max-width:900px) {
             .form-label {
@@ -2408,6 +2408,12 @@
                 clip: auto;
                 white-space: normal
             }
+            .photo-box img {
+                height: 140% !important;
+                margin-top: -60px !important;
+                margin-left: -120px;
+                    }
+
         }
 
         .form-control {
