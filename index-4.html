@@ -471,6 +471,63 @@
                 padding-top: 20px;
             }
         }
+        /* ——— boyut & grid ——— */
+.slim-wrapper{
+  display:flex;flex-wrap:wrap;gap:24px;
+  max-width:900px;margin-inline:auto
+}
+.slim-card{
+  flex:1 1 280px;           /* min 280 px, artan alanı paylaş */
+  display:flex;align-items:center;
+  padding:20px 24px;
+  border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.05);
+  min-height:200px;         /* kart yüksekliği */
+}
+/* ——— sol kart ——— */
+.call-card{
+  background:linear-gradient(135deg,var(--primary-dark),#162133);
+  color:#fff
+}
+/* ——— sağ kart ——— */
+.form-card{background:var(--gray-background)}
+
+/* ——— ikon + metin hizalama ——— */
+.card-left{display:flex;align-items:center;gap:20px}
+.slim-icon{
+  width:56px;height:56px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.15)
+}
+.slim-icon svg{width:28px;height:28px;color:#fff}
+
+/* ——— metin & linkler ——— */
+.slim-title{font-size:18px;margin:0 0 6px 0;font-weight:700}
+.slim-link{
+  display:block;font-size:15px;color:#fff;opacity:.9;
+  transition:opacity .2s
+}
+.slim-link:hover{opacity:1}
+.whatsapp{color:var(--whatsapp-green)}
+
+/* ——— kompakt form ——— */
+.slim-form{display:flex;flex-wrap:wrap;gap:12px;width:100%}
+.slim-form input{
+  flex:1 1 140px;min-width:140px;
+  padding:10px 14px;border:1px solid var(--gray-border);
+  border-radius:8px;font-size:14px
+}
+.slim-form button{
+  background:var(--secondary-orange);color:#fff;font-weight:600;
+  padding:10px 24px;border-radius:8px;border:none;cursor:pointer;
+  transition:background .2s
+}
+.slim-form button:hover{background:var(--secondary-orange-hover)}
+
+/* ——— responsive ——— */
+@media (max-width:639px){
+  .slim-card{min-height:auto;width:100%}
+  .card-left{gap:14px}
+}
     </style>
   
     <style>
@@ -857,7 +914,39 @@
                 </div>
             </div>
        
-    
+            <div class="slim-wrapper">
+                <!-- Hemen Ara -->
+                <aside class="slim-card call-card">
+                  <div class="card-left">
+                    <span class="slim-icon">
+                      <!-- phone -->
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.68l1.5 4.49a1
+                                 1 0 01-.5 1.21l-2.26 1.13a11 11 0 005.52
+                                 5.52l1.13-2.26a1 1 0 011.21-.5l4.49 1.5a1
+                                 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.7 21
+                                 3 14.3 3 6V5z"/>
+                      </svg>
+                    </span>
+                    <div class="card-text">
+                      <h3 class="slim-title">Hemen Arayın</h3>
+                      <a href="tel:05541213128" class="slim-link">0554&nbsp;121&nbsp;31&nbsp;28</a>
+                      <a href="https://wa.me/905541213128"
+                         target="_blank" class="slim-link whatsapp">WhatsApp</a>
+                    </div>
+                  </div>
+                </aside>
+              
+                <!-- Sizi Arayalım -->
+                <section class="slim-card form-card">
+                  <form onsubmit="submitCallbackForm(event)" class="slim-form">
+                    <input type="text"   placeholder="Ad Soyad"  required name="name">
+                    <input type="tel"    placeholder="Telefon"   required name="phone">
+                    <button type="submit">Gönder</button>
+                  </form>
+                </section>
+              </div>
         <!-- JavaScript - Form gönderme işlemi için (varsa) -->
         <script>
             function submitCallbackForm(event) {
