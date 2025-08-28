@@ -1,0 +1,88 @@
+ 
+/* ——— KÖK DEĞİŞKENLER ——— */
+:root{
+  --dark:#1F2A44; --dark-2:#162133; --secondary:#FF7A1A; --secondary-hover:#E56B12;
+  --wa:#25D366; --wa-hover:#1EBE5D; --bg:#F8FAFC; --border:#E5E7EB;
+  --text:#111827; --muted:#6B7280; --white:#fff; --radius:12px; --shadow:0 4px 12px rgba(0,0,0,.07);
+}
+html,body{height:100%}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);}
+img{max-width:100%;height:auto;display:block}
+
+/* ——— GENEL BUTONLAR ——— */
+.btn-primary{display:inline-flex;align-items:center;justify-content:center;padding:.9rem 1.25rem;border-radius:.75rem;background:var(--secondary);color:#fff;font-weight:700;box-shadow:0 6px 14px rgba(255,122,26,.2)}
+.btn-primary:hover{background:var(--secondary-hover)}
+.btn-white{display:inline-flex;align-items:center;justify-content:center;padding:.9rem 1.25rem;border-radius:.75rem;background:#fff;color:var(--dark);font-weight:700}
+.btn-white:hover{background:#f2f5f8}
+.btn-secondary{display:inline-flex;align-items:center;justify-content:center;padding:.6rem .9rem;border-radius:.6rem;background:var(--secondary);color:#fff;font-weight:600}
+.btn-secondary:hover{background:var(--secondary-hover)}
+.btn-ghost{display:inline-flex;align-items:center;justify-content:center;padding:.55rem .85rem;border-radius:.6rem;border:1px solid #1f2a44;color:#1f2a44;background:#fff;font-weight:600}
+.btn-ghost:hover{background:#f7fafc}
+
+/* ——— HERO ——— */
+.hero-wrap{background:linear-gradient(135deg, rgba(31,42,68,.95) 0%, rgba(30,41,59,.85) 60%, rgba(22,33,51,.9) 100%);position:relative}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.35))}
+
+/* ——— HİZMET KARTLARI ——— */
+.svc-card{background:#fff;border-radius:.9rem;box-shadow:0 4px 12px rgba(0,0,0,.06);padding:1rem}
+.svc-card:hover{box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.svc-icon{width:3rem;height:3rem;border-radius:.75rem;background:#e2e8f0;display:flex;align-items:center;justify-content:center;margin-bottom:.6rem}
+.svc-title{font-size:1.125rem;font-weight:700;margin:0 0 .35rem}
+.svc-text{color:#4b5563;margin:0 0 .6rem;line-height:1.55}
+.svc-list{margin:0 0 .8rem;padding:0;list-style:none;display:grid;gap:.35rem}
+.svc-list li{font-size:.9rem;color:#4b5563;display:flex;gap:.5rem;align-items:center}
+.svc-list .chk{width:.9rem;height:.9rem;border-radius:.25rem;background:#10b981;display:inline-block}
+
+/* ——— CALCULATOR BÖLÜMÜ ——— */
+.calc-wrap{background:linear-gradient(135deg,#1f2a44 0%,#283e6c 40%,#1e293b 100%);position:relative;overflow:hidden;padding:2.25rem 0}
+.calc-wrap::before{content:"";position:absolute;inset:0;background:url('nakliye-bg.jpg') center/cover no-repeat;opacity:.22;z-index:0}
+.calc-wrap>*{position:relative;z-index:1}
+
+.quote-container{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:16px;align-items:stretch}
+@media (min-width:900px){.quote-container{grid-template-columns:400px 1fr;gap:22px}}
+
+.quote-card{border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;display:flex;flex-direction:column;gap:12px}
+.calculator-card{background:linear-gradient(135deg,var(--dark) 0%, var(--dark-2) 100%);color:#fff}
+.form-card{background:#FBFDFF;border:1px solid var(--border)}
+.icon-wrapper{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.18)}
+.calculator-card .icon-wrapper svg,.form-card .icon-wrapper svg{width:20px;height:20px;color:#fff}
+.form-card .icon-wrapper{background:var(--secondary);box-shadow:0 4px 10px rgba(255,122,26,.18)}
+.form-card h3{margin:0;color:var(--text);letter-spacing:-.2px}
+.form-card>p{color:#4B5563;line-height:1.6;margin:.1rem 0 .25rem;max-width:60ch}
+
+/* mini hesap */
+.mini-calculator{background:rgba(0,0,0,.18);border-radius:10px;padding:14px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mini-calculator label{font-size:.82rem;font-weight:600;margin-bottom:4px;display:block}
+.mini-calculator input,.mini-calculator select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.25);color:#fff;font-size:.95rem}
+.mini-calculator input::placeholder{color:rgba(255,255,255,.55)}
+.mini-calculator .full-width{grid-column:1 / -1}
+.calculator-output{grid-column:1 / -1;text-align:center;padding:10px;margin-top:4px;background:rgba(0,0,0,.2);border-radius:8px}
+.calculator-output p{font-size:.85rem;margin:0;color:rgba(255,255,255,.75)}
+.calculator-output .price{font-size:1.35rem;font-weight:800;letter-spacing:-.5px;color:#fff}
+.contact-buttons{display:flex;gap:10px;margin-top:6px}
+.contact-buttons .btn{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border-radius:10px;text-decoration:none;font-weight:700;font-size:.95rem;border:0;cursor:pointer}
+.contact-buttons .btn--white{background:#fff;color:var(--dark)}
+.contact-buttons .btn--white:hover{background:#f0f3f7}
+.contact-buttons .btn--whatsapp{background:var(--wa);color:#fff}
+.contact-buttons .btn--whatsapp:hover{background:var(--wa-hover)}
+
+/* Form */
+.callback-form{display:flex;flex-direction:column;gap:12px;max-width:560px}
+.form-grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media (min-width:640px){.form-grid{grid-template-columns:1fr 1fr}}
+.callback-form input,.callback-form select,.callback-form textarea{width:100%;min-height:48px;border:1px solid var(--border);border-radius:10px;background:#fff;font-size:.95rem;padding:12px}
+.callback-form input:focus,.callback-form select:focus,.callback-form textarea:focus{outline:none;border-color:var(--secondary);box-shadow:0 0 0 3px rgba(255,122,26,.15)}
+.details-toggle{padding-top:6px;border-top:1px dashed var(--border);margin-top:2px}
+.details-toggle summary{cursor:pointer;color:var(--secondary);font-weight:700}
+.details-toggle-content{margin-top:8px;display:flex;flex-direction:column;gap:10px}
+.submit-button{width:100%;max-width:260px;min-height:48px;border-radius:10px;background:var(--secondary);color:#fff;font-weight:800;box-shadow:0 6px 12px rgba(255,122,26,.16)}
+.submit-button:hover{background:var(--secondary-hover);transform:translateY(-1px)}
+.form-footer{font-size:.8rem;color:#6B7280;margin-top:2px;text-align:left}
+
+/* ——— RESPONSIVE İNCE AYARLAR ——— */
+@media (max-width:600px){
+  section{padding-left:16px !important;padding-right:16px !important}
+  .svc-card{padding:14px}
+  .btn-primary,.btn-white{padding:.8rem 1rem}
+}
+
